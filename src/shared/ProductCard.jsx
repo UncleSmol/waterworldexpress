@@ -1,7 +1,6 @@
 import React, { useState } from "react";
+import { useCart } from "../context/CartContext";
 import {
-  Image,
-  Tag,
   Coins,
   ShoppingCartSimple,
   CaretLeft,
@@ -11,6 +10,7 @@ import "./ProductCard.css";
 
 const ProductCard = ({ product }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const { addToCart } = useCart();
 
   const nextImage = () => {
     setCurrentImageIndex(
@@ -23,6 +23,19 @@ const ProductCard = ({ product }) => {
       (prevIndex) =>
         (prevIndex - 1 + product.images.length) % product.images.length
     );
+  };
+
+  const handleAddToCart = () => {
+    addToCart(product);
+
+    // Visual feedback
+    const button = document.querySelector(
+      `.add-to-cart-btn[data-id="${product.id}"]`
+    );
+    if (button) {
+      button.classList.add("added");
+      setTimeout(() => button.classList.remove("added"), 500);
+    }
   };
 
   return (
@@ -52,9 +65,14 @@ const ProductCard = ({ product }) => {
             <Coins size={20} className="icon price-icon" />
             <p className="product-price">{product.price}</p>
           </div>
-          <button className="add-to-cart-btn">
+          <button
+            className="add-to-cart-btn"
+            onClick={handleAddToCart}
+            data-id={product.id}
+          >
             <ShoppingCartSimple size={20} className="icon cart-icon" />
-            Add to Cart
+            <span className="btn-text">Add to Cart</span>
+            <span className="added-text">Added!</span>
           </button>
         </div>
       </div>

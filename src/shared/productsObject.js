@@ -134,7 +134,9 @@ export const productsObject = {
       description:
         "Create personalised water bottles for your business, wedding, or special event.",
       price: "R20.00",
-      images: ["https://i.imgur.com/your-image-url-13.png"],
+      images: [
+        "https://i.etsystatic.com/6887329/r/il/896795/767372027/il_1080xN.767372027_cokb.jpg",
+      ],
     },
   ],
   "Water Refills": [
@@ -144,14 +146,18 @@ export const productsObject = {
       description:
         "Refill your own bottle with our purified water - the smart choice!",
       price: "R5.00",
-      images: ["https://i.imgur.com/your-image-url-14.png"],
+      images: [
+        "https://www.hydrachill.com/images/product/2-in-1-water-refilling-station-new.png",
+      ],
     },
     {
       id: "r2",
       name: "Water Refill (5L)",
       description: "Bring your larger container for an economical 5L refill.",
       price: "R20.00",
-      images: ["https://i.imgur.com/your-image-url-15.png"],
+      images: [
+        "https://www.hydrachill.com/images/product/2-in-1-water-refilling-station-new.png",
+      ],
     },
     {
       id: "r3",
@@ -159,7 +165,9 @@ export const productsObject = {
       description:
         "The most cost-effective way to stay hydrated. Perfect for home or office.",
       price: "R60.00",
-      images: ["https://i.imgur.com/your-image-url-16.png"],
+      images: [
+        "https://www.hydrachill.com/images/product/2-in-1-water-refilling-station-new.png",
+      ],
     },
   ],
   "Water Containers": [
@@ -169,7 +177,7 @@ export const productsObject = {
       description:
         "Sturdy, BPA-free container for easy water refilling and storage.",
       price: "R45.00",
-      images: ["https://i.imgur.com/your-image-url-17.png"],
+      images: ["https://i.ebayimg.com/images/g/X6YAAOSw0F1lhj8g/s-l1600.jpg"],
     },
     {
       id: "c2",
@@ -177,7 +185,9 @@ export const productsObject = {
       description:
         "A robust, large container ideal for dispensers or bulk storage at home.",
       price: "R120.00",
-      images: ["https://i.imgur.com/your-image-url-18.png"],
+      images: [
+        "https://www.countiescleaning.co.nz/site/file/product/7881/jerry-can-20l-cube.jpg",
+      ],
     },
     {
       id: "c3",
@@ -185,7 +195,9 @@ export const productsObject = {
       description:
         "Stylish and durable bottle for staying hydrated on the go, from the gym to the taxi.",
       price: "R65.00",
-      images: ["https://i.imgur.com/your-image-url-19.png"],
+      images: [
+        "https://res.cloudinary.com/forallpromos/image/fetch/f_auto/v1630744976/https://www.4allpromos.com/sites/default/files/imagecache/720x720/images/products/3764/286%2028oz%20color%20sports%20bottle.jpg",
+      ],
     },
   ],
   "Water Dispensers": [
@@ -195,7 +207,9 @@ export const productsObject = {
       description:
         "Convenient countertop dispenser with both hot and cold water on tap.",
       price: "R800.00",
-      images: ["https://i.imgur.com/your-image-url-20.png"],
+      images: [
+        "https://tse2.mm.bing.net/th/id/OIP.B8MeF9zUbBgNVjSXfsRrOwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+      ],
     },
     {
       id: "d2",
@@ -203,7 +217,9 @@ export const productsObject = {
       description:
         "A sleek, modern dispenser suitable for homes, offices, or waiting rooms.",
       price: "R1,200.00",
-      images: ["https://i.imgur.com/your-image-url-21.png"],
+      images: [
+        "https://pureh2osystems.co.in/wp-content/uploads/2024/12/Floor-standing-Dispenser.png",
+      ],
     },
   ],
   Beverages: [
@@ -213,7 +229,10 @@ export const productsObject = {
       description:
         "A fizzy and flavourful fruit juice - a great alternative to sugary drinks.",
       price: "R22.00",
-      images: ["https://i.imgur.com/your-image-url-22.png"],
+      images: [
+        "https://i.pinimg.com/originals/21/e4/52/21e452987eb82c0c20222f0765fc7d53.jpg",
+        "https://tse1.mm.bing.net/th/id/OIP.MnSWoYdnEvoaQpehkgciugHaGZ?rs=1&pid=ImgDetMain&o=7&rm=3",
+      ],
     },
     {
       id: "be2",
@@ -221,7 +240,11 @@ export const productsObject = {
       description:
         "A refreshing iced tea brewed with real tea leaves and natural sweeteners.",
       price: "R25.00",
-      images: ["https://i.imgur.com/your-image-url-23.png"],
+      images: [
+        "https://i5.walmartimages.com/asr/9b6011c1-f435-4303-b589-c3161fcfdcff_1.beb5f59934865d8d7e96946644a5ecdb.jpeg",
+        "https://firstchoicevend.com/wp-content/uploads/2013/08/LN_L_20oz.png",
+        "https://www.herbapol.com.pl/wp-content/uploads/Ice-tea-lemon-v2.jpg",
+      ],
     },
     {
       id: "be3",
@@ -229,7 +252,10 @@ export const productsObject = {
       description:
         "A selection of popular energy drinks to give you that extra boost you need.",
       price: "R28.00",
-      images: ["https://i.imgur.com/your-image-url-24.png"],
+      images: [
+        "https://scottishgrocer.co.uk/wp-content/uploads/2022/10/Healthier-energy-drinks.jpg",
+        "https://149449856.v2.pressablecdn.com/wp-content/uploads/2019/07/Energy-Drinks.jpg",
+      ],
     },
   ],
 };

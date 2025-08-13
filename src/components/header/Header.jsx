@@ -1,5 +1,4 @@
-// Updated Header.jsx
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../../assets/images/waterworldlogo.png";
 import DevDocSig from "../../sig/dev-doc-logo.svg";
 import {
@@ -11,10 +10,12 @@ import {
   Phone,
 } from "@phosphor-icons/react";
 import { useSpring, animated } from "@react-spring/web";
-import { Link } from "react-router-dom"; // Added Link component
+import { Link } from "react-router-dom";
+import { useCart } from "../../context/CartContext";
 import "./Header.css";
 
 const Header = () => {
+  const { cartCount } = useCart();
   const NavItems = [
     {
       navIdKey: 1,
@@ -42,6 +43,13 @@ const Header = () => {
     },
     {
       navIdKey: 5,
+      navLabel: "CART",
+      navIcon: <ShoppingCart size={24} weight="bold" />,
+      path: "/cart",
+      isCart: true,
+    },
+    {
+      navIdKey: 6,
       navLabel: "Developed by",
       navIcon: DevDocSig,
       isSignature: true,
@@ -108,6 +116,8 @@ const Header = () => {
               className={
                 item.isSignature
                   ? "__DevSignature"
+                  : item.isCart
+                  ? "__CartLink"
                   : item.isHighlighted
                   ? "__Highlighted"
                   : ""
@@ -127,6 +137,9 @@ const Header = () => {
                 <Link to={item.path} onClick={handleNavClick}>
                   {item.navIcon}
                   <span>{item.navLabel}</span>
+                  {item.isCart && cartCount > 0 && (
+                    <span className="cart-badge">{cartCount}</span>
+                  )}
                 </Link>
               )}
             </li>

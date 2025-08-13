@@ -1,4 +1,4 @@
-/* Header.css */
+/* Header.css - Updated with Cart Icon Focus */
 
 .__Header {
   display: flex;
@@ -16,6 +16,12 @@
 .__Logo {
   z-index: 99;
   width: 60px;
+  transition: transform var(--transition-speed-fast)
+    var(--transition-timing-ease);
+}
+
+.__Logo:hover {
+  transform: scale(1.05);
 }
 
 .__MobileMenuToggle {
@@ -24,8 +30,8 @@
   cursor: pointer;
   padding: var(--space-xs);
   color: var(--color-text-body);
-  display: block; /* Show on mobile by default */
-  z-index: 100; /* Increased to ensure it's always on top */
+  display: block;
+  z-index: 100;
 }
 
 .__MobileMenuToggle:focus {
@@ -38,13 +44,20 @@
   top: var(--header-size);
   left: 0;
   width: 100%;
-  height: 100vh; /* Cover the full screen */
+  height: 100vh;
   background-color: var(--color-background-card);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 9;
+  transform: translateY(-100%);
+  transition: transform var(--transition-speed-fast)
+    var(--transition-timing-ease);
+}
+
+.__Navigation.active {
+  transform: translateY(0);
 }
 
 .__NavList {
@@ -65,73 +78,67 @@
   font-size: var(--font-size-large);
   font-weight: 400;
   display: flex;
-  flex-direction: column; /* Default to column for mobile */
+  flex-direction: column;
   align-items: center;
   gap: var(--space-sm);
-  transition: color var(--transition-speed-fast) var(--transition-timing-ease);
+  transition: all var(--transition-speed-fast) var(--transition-timing-ease);
+  position: relative;
+  padding: var(--space-xs) var(--space-sm);
 }
 
 .__NavList li a:hover {
   color: var(--color-text-link-hover);
+  transform: translateY(-2px);
 }
 
-/* Mobile specific styles */
-@media (max-width: 768px) {
-  .__NavList li a {
-    flex-direction: row; /* Change to row for mobile */
-    gap: var(--space-md);
-  }
-
-  /* Signature styling on mobile */
-  .__NavList li.__DevSignature a {
-    margin-top: 20px;
-    padding: 10px 25px;
-    display: flex;
-  }
-
-  .__DevSignature span {
-    font-size: 1.1rem;
-  }
+/* Cart-specific styles */
+.__CartLink {
+  position: relative;
 }
 
-/* Media Query for Desktop */
-@media (min-width: 769px) {
-  .__MobileMenuToggle {
-    display: none; /* Hide mobile toggle button */
-  }
+.__CartLink a {
+  padding: var(--space-sm);
+  border-radius: 50%;
+  background-color: var(--color-brand-tertiary);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  /* Reset navigation for desktop view */
-  .__Navigation {
-    position: static;
-    top: auto;
-    width: auto;
-    height: auto;
-    background-color: transparent;
-    flex-direction: row;
-  }
+.cart-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--color-brand-primary);
+  color: var(--color-text-on-dark);
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: pulse 1.5s infinite;
+}
 
-  .__NavList {
-    flex-direction: row;
-    gap: var(--space-md);
+@keyframes pulse {
+  0% {
+    transform: scale(1);
   }
-
-  .__NavList li a {
-    flex-direction: row;
-    font-size: var(--font-size-medium);
+  50% {
+    transform: scale(1.1);
   }
-
-  /* Hide icons on desktop */
-  .__NavList li:not(.__DevSignature) a > svg {
-    display: none;
-  }
-
-  .__DevSignature {
-    display: none;
+  100% {
+    transform: scale(1);
   }
 }
 
-/* Unique styling for highlighted nav item */
-.__NavList li.__DevSignature a {
+/* Signature styling */
+.__DevSignature a {
   background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
   border-radius: 50px;
   padding: 8px 20px;
@@ -140,7 +147,6 @@
   position: relative;
   overflow: hidden;
   animation: pulse-glow 2s infinite;
-  transform: scale(0.4);
 }
 
 /* Pulsing animation */
@@ -157,8 +163,11 @@
 }
 
 /* Hover effects */
+.__NavList li a:hover {
+  transform: translateY(-3px);
+}
+
 .__NavList li.__DevSignature a:hover {
-  transform: translateY(-3px) scale(0.4); /* Combine transforms */
   background: linear-gradient(135deg, #7a21e0 0%, #3086ff 100%);
   animation-play-state: paused;
 }
@@ -173,8 +182,90 @@
 .__DevSignature img {
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
   transition: transform 0.3s ease;
+  height: 24px;
 }
 
 .__DevSignature a:hover img {
   transform: rotate(-5deg) scale(1.1);
+}
+
+/* Mobile specific styles */
+@media (max-width: 768px) {
+  .__NavList li a {
+    flex-direction: row;
+    gap: var(--space-md);
+  }
+
+  .__CartLink a {
+    width: auto;
+    height: auto;
+    border-radius: var(--border-radius-pill);
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .__CartLink a span:not(.cart-badge) {
+    display: block;
+    font-size: var(--font-size-medium);
+  }
+
+  .cart-badge {
+    top: -8px;
+    right: -8px;
+  }
+}
+
+/* Media Query for Desktop */
+@media (min-width: 769px) {
+  .__MobileMenuToggle {
+    display: none;
+  }
+
+  .__Navigation {
+    position: static;
+    top: auto;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    flex-direction: row;
+    transform: none;
+  }
+
+  .__NavList {
+    flex-direction: row;
+    gap: var(--space-md);
+  }
+
+  .__NavList li a {
+    flex-direction: row;
+    font-size: var(--font-size-medium);
+  }
+
+  /* Hide labels except for cart badge */
+  .__NavList li:not(.__DevSignature):not(.__CartLink) a > span {
+    display: none;
+  }
+
+  .__CartLink a > span:not(.cart-badge) {
+    display: none;
+  }
+
+  .__CartLink a {
+    width: 42px;
+    height: 42px;
+    padding: var(--space-xs);
+  }
+
+  .cart-badge {
+    top: -5px;
+    right: -5px;
+  }
+
+  .__NavList li a > svg {
+    margin: 0;
+  }
+
+  .__DevSignature {
+    display: none;
+    margin-left: var(--space-sm);
+  }
 }
