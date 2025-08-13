@@ -1,0 +1,216 @@
+/* Homepage.css - Styled using Water World Express Design System */
+
+.homepage {
+  font-family: var(--font-family-body);
+  color: var(--color-text-body);
+  background-color: var(--color-background-body);
+  line-height: var(--line-height-base);
+}
+
+/* Hero Section */
+.hero {
+  background-color: var(--color-brand-callout);
+  color: var(--color-text-on-dark);
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-heading {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-h1);
+  margin-bottom: var(--space-sm);
+  line-height: var(--line-height-heading);
+}
+
+.hero-subheading {
+  font-size: var(--font-size-large);
+  max-width: var(--container-max-width);
+  margin: 0 auto var(--space-lg);
+}
+
+.hero-icon {
+  margin: var(--space-md) 0;
+  color: var(--color-brand-secondary);
+  filter: drop-shadow(0 0 8px rgba(72, 202, 228, 0.6));
+}
+
+.order-button {
+  background-color: var(--color-brand-secondary);
+  color: var(--color-text-body);
+  border: none;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--border-radius-pill);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-medium);
+  cursor: pointer;
+  transition: all var(--transition-speed-normal) var(--transition-timing-ease);
+  box-shadow: var(--box-shadow-button);
+}
+
+.order-button:hover {
+  background-color: var(--color-brand-tertiary);
+  transform: translateY(-3px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+/* Section Styling */
+.about-section,
+.products-section,
+.services-section,
+.contact-section {
+  max-width: var(--container-max-width);
+  margin: var(--space-xl) auto;
+  padding: 0 var(--container-padding);
+}
+
+.section-heading {
+  font-family: var(--font-family-heading);
+  color: var(--color-brand-callout);
+  font-size: var(--font-size-h2);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  position: relative;
+}
+
+/* About Section */
+.about-section {
+  background-color: var(--color-background-card);
+  border-radius: var(--border-radius-base);
+  padding: var(--space-lg);
+  box-shadow: var(--box-shadow-card);
+  position: relative;
+}
+
+.about-paragraph {
+  margin-bottom: var(--space-md);
+  text-align: center;
+}
+
+.about-icon {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  color: var(--color-brand-tertiary);
+}
+
+/* Products Section */
+.products-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.product-item {
+  background-color: var(--color-background-card);
+  border-radius: var(--border-radius-base);
+  padding: var(--space-lg);
+  text-align: center;
+  box-shadow: var(--box-shadow-card);
+  transition: transform var(--transition-speed-normal)
+    var(--transition-timing-ease);
+}
+
+.product-item:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.product-icon {
+  margin-bottom: var(--space-sm);
+}
+
+.product-icon.primary {
+  color: var(--color-brand-primary);
+}
+.product-icon.secondary {
+  color: var(--color-brand-secondary);
+}
+.product-icon.tertiary {
+  color: var(--color-brand-tertiary);
+}
+
+.product-title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-h3);
+  margin-bottom: var(--space-sm);
+  color: var(--color-brand-callout);
+}
+
+/* Services Section */
+.services-section {
+  background-color: var(--color-brand-tertiary);
+  border-radius: var(--border-radius-base);
+  padding: var(--space-lg);
+  text-align: center;
+}
+
+.services-paragraph {
+  margin-bottom: var(--space-md);
+}
+
+.services-icon {
+  color: var(--color-brand-callout);
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: var(--color-background-footer);
+  color: var(--color-text-on-dark);
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+}
+
+.contact-heading {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-h2);
+  margin-bottom: var(--space-lg);
+}
+
+.contact-intro {
+  max-width: 600px;
+  margin: 0 auto var(--space-xl);
+  font-size: var(--font-size-large);
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.contact-icon {
+  color: var(--color-brand-secondary);
+}
+
+.copyright {
+  margin-top: var(--space-lg);
+  font-size: var(--font-size-small);
+  opacity: 0.8;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .hero-heading {
+    font-size: calc(var(--font-size-h1) * 0.8);
+  }
+
+  .section-heading {
+    font-size: calc(var(--font-size-h2) * 0.9);
+  }
+}

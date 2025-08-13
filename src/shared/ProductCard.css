@@ -1,0 +1,157 @@
+/* ProductCard.css - Styled using Water World Express Design System */
+
+.product-card {
+  background-color: var(--color-background-card);
+  border-radius: var(--border-radius-base);
+  overflow: hidden;
+  box-shadow: var(--box-shadow-card);
+  transition: all var(--transition-speed-normal) var(--transition-timing-ease);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.image-container {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-speed-slow)
+    var(--transition-timing-ease);
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.image-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-speed-fast) var(--transition-timing-ease);
+  z-index: 10;
+}
+
+.image-nav-btn:hover {
+  background-color: var(--color-brand-secondary);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.left-btn {
+  left: var(--space-sm);
+}
+
+.right-btn {
+  right: var(--space-sm);
+}
+
+.product-info {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-name {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-h3);
+  color: var(--color-brand-callout);
+  margin-bottom: var(--space-sm);
+  line-height: var(--line-height-heading);
+}
+
+.product-description {
+  font-size: var(--font-size-medium);
+  color: var(--color-text-body);
+  margin-bottom: var(--space-md);
+  flex-grow: 1;
+}
+
+.product-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  background-color: var(--color-brand-tertiary);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--border-radius-pill);
+}
+
+.price-icon {
+  color: var(--color-brand-callout);
+}
+
+.product-price {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-large);
+  color: var(--color-brand-callout);
+  font-weight: bold;
+}
+
+.add-to-cart-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  background-color: var(--color-brand-primary);
+  color: var(--color-text-on-dark);
+  border: none;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--border-radius-pill);
+  font-family: var(--font-family-body);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all var(--transition-speed-normal) var(--transition-timing-ease);
+  box-shadow: var(--box-shadow-button);
+}
+
+.add-to-cart-btn:hover {
+  background-color: var(--color-brand-secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.cart-icon {
+  transition: transform var(--transition-speed-fast)
+    var(--transition-timing-ease);
+}
+
+.add-to-cart-btn:hover .cart-icon {
+  transform: scale(1.2) rotate(-10deg);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .product-meta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .add-to-cart-btn {
+    justify-content: center;
+  }
+}

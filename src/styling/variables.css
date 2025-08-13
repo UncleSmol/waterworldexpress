@@ -1,0 +1,97 @@
+/*
+ * Water World Express - Comprehensive Global Variables
+ *
+ * This stylesheet defines a complete design system using CSS custom properties.
+ * These variables are organized to control all aspects of the site's look,
+ * including colors, typography, spacing, transitions, and specific component styles.
+ *
+ */
+
+/* Fonts Import */
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Playwrite+DE+Grund:wght@100..400&display=swap");
+
+:root {
+  /* =========================================================================
+     * 1. Core Colors
+     * Define your main brand colors here. These are the building blocks.
+     * ========================================================================= */
+  --color-brand-primary: #0077b6; /* A deep, professional blue (e.g., for headers, primary buttons) */
+  --color-brand-secondary: #48cae4; /* A vibrant, light blue for accents and highlights */
+  --color-brand-tertiary: #90e0ef; /* A very light, airy blue for subtle backgrounds */
+  --color-brand-callout: #023e8a; /* A dark, bold blue for strong call-to-action sections */
+
+  /* =========================================================================
+     * 2. Semantic Colors
+     * Use these variables to define the purpose of a color, not just the color itself.
+     * This makes your code more readable and maintainable.
+     * ========================================================================= */
+  --color-background-body: #caf0f8; /* The main background color for the entire page */
+  --color-background-card: #fefefe; /* The background for cards, modals, or other content blocks */
+  --color-background-footer: var(
+    --color-brand-callout
+  ); /* The background for the footer */
+
+  --color-text-body: #03045e; /* Default text color for paragraphs and headings */
+  --color-text-on-dark: #fefefe; /* Text color to be used on dark backgrounds */
+  --color-text-link: var(
+    --color-brand-secondary
+  ); /* Color for unvisited links */
+  --color-text-link-hover: var(
+    --color-brand-primary
+  ); /* Color for links on hover */
+
+  /* =========================================================================
+     * 3. Typography
+     * Control all font-related properties from a single location.
+     * ========================================================================= */
+  --font-family-heading: "Audiowide", sans-serif; /* A modern, geometric font for titles */
+  --font-family-body: "Playwrite DE Grund", sans-serif; /* A highly readable font for paragraphs */
+
+  --font-size-base: 16px;
+  --font-size-small: 0.875rem; /* 14px */
+  --font-size-medium: 1rem; /* 16px */
+  --font-size-large: 1.25rem; /* 20px */
+
+  --line-height-base: 1.6;
+  --line-height-heading: 1.2;
+  --header-size: 60px;
+
+  /* Heading Sizes */
+  --font-size-h1: 3rem;
+  --font-size-h2: 2.25rem;
+  --font-size-h3: 1.75rem;
+
+  /* =========================================================================
+     * 4. Layout & Spacing
+     * Establish a consistent spacing rhythm across the entire site.
+     * ========================================================================= */
+  --space-unit: 1rem;
+  --space-xs: calc(0.25 * var(--space-unit)); /* 0.25rem */
+  --space-sm: calc(0.5 * var(--space-unit)); /* 0.5rem */
+  --space-md: var(--space-unit); /* 1rem */
+  --space-lg: calc(2 * var(--space-unit)); /* 2rem */
+  --space-xl: calc(4 * var(--space-unit)); /* 4rem */
+
+  --container-max-width: 1200px;
+  --container-padding: var(--space-md);
+
+  /* =========================================================================
+     * 5. Borders & Shadows
+     * Control borders, radii, and shadows for a cohesive look.
+     * ========================================================================= */
+  --border-radius-base: 8px;
+  --border-radius-pill: 50px;
+
+  --box-shadow-card: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --box-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+  --box-shadow-button: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  /* =========================================================================
+     * 6. Transitions & Animations
+     * Define consistent speeds and timing functions for all UI animations.
+     * ========================================================================= */
+  --transition-speed-fast: 0.2s;
+  --transition-speed-normal: 0.3s;
+  --transition-speed-slow: 0.5s;
+  --transition-timing-ease: ease-in-out;
+}

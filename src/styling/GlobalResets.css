@@ -1,0 +1,117 @@
+/*
+ * =========================================================================
+ * Global Resets & Normalize
+ *
+ * This section resets browser default styles to provide a consistent
+ * starting point across all browsers. It uses a modern approach,
+ * including box-sizing for easier layouts and setting base styles.
+ *
+ * =========================================================================
+ */
+
+/* 1. Box-sizing: Set the global box model to border-box. This makes
+   * layout calculations much more intuitive. All padding and borders
+   * are included in the element's width and height. */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* 2. Inherit box-sizing for all elements. This ensures that every element
+     * on the page uses the same, predictable box model. */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* 3. Body and HTML defaults. Set base font, line-height, and margins.
+     * A minimum height of 100vh ensures the footer stays at the bottom. */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text-body);
+  background-color: var(--color-background-body);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Allows content to push the footer down */
+}
+
+/* 4. Headings: Reset top margins and set consistent typography. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: var(--space-sm);
+  font-family: var(--font-family-heading);
+  line-height: var(--line-height-heading);
+  color: var(--color-brand-primary);
+}
+h1 {
+  font-size: var(--font-size-h1);
+}
+h2 {
+  font-size: var(--font-size-h2);
+}
+h3 {
+  font-size: var(--font-size-h3);
+}
+/* Add h4, h5, h6 styles here if needed */
+
+/* 5. Paragraphs: Reset bottom margin. */
+p {
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+}
+
+/* 6. Links: Remove the default text decoration and apply a smooth transition. */
+a {
+  color: var(--color-text-link);
+  text-decoration: none;
+  transition: color var(--transition-speed-normal),
+    transform var(--transition-speed-normal);
+}
+
+a:hover {
+  color: var(--color-text-link-hover);
+  text-decoration: underline;
+  transform: translateY(-1px); /* Subtle hover effect */
+}
+
+/* 7. Images: Make images responsive by default. */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Removes any extra space below the image */
+}
+
+/* 8. Lists: Remove default list styles. */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 9. Forms: Standardize button and input styles. */
+button,
+input[type="submit"],
+input[type="reset"] {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.__MainContainer {
+  height: calc(100dvh - var(--header-size));
+  padding: var(--space-md);
+}
