@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   server: {
     // Add the specific host to the allowedHosts array
-    allowedHosts: ["cz5cq5-5173.csb.app"],
+    allowedHosts: ["f3m9v5-5173.csb.app"],
   },
 });

@@ -6,8 +6,8 @@ export const productsObject = {
       description: "Our signature purified water, perfect for daily hydration.",
       price: "R12.00",
       images: [
-        "https://i.imgur.com/your-image-url-1a.png",
-        "https://i.imgur.com/your-image-url-1b.png",
+        "https://tse2.mm.bing.net/th/id/OIP.vECx4E4B-3y11BL8d9iztQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+        "https://www.checkers.co.za/medias/checkers1200Wx1200H-medias-10802718EA-en-shopriteGlobalProductCatalog-20241120091434.png?context=bWFzdGVyfGltYWdlc3w0ODIwMTh8aW1hZ2UvcG5nfGltYWdlcy9oNjYvaGRiLzExNDIzMzAyMDI1MjQ2LnBuZ3wwOGViNmVkYmMwNjVlNDhkNjU1MTY5YTAxNmJmMDI2MmQxYjY1MDY0ZWI4N2I0NzI5MTQ4Y2U5NzU4MDkwNzIw",
       ],
     },
     {
@@ -15,7 +15,10 @@ export const productsObject = {
       name: "Still Purified Water (Bulk)",
       description: "A 5L bottle for family use or bulk refilling.",
       price: "R25.00",
-      images: ["https://i.imgur.com/your-image-url-2.png"],
+      images: [
+        "https://tse3.mm.bing.net/th/id/OIP.bIG2qLOWfCZcEoUinUsfPQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+        "https://m.media-amazon.com/images/I/71x00JUADoL._SL1200_.jpg",
+      ],
     },
     {
       id: "b3",
@@ -24,9 +27,9 @@ export const productsObject = {
         "A small, colourful bottle of purified water for the young ones.",
       price: "R10.00",
       images: [
-        "https://i.imgur.com/your-image-url-3a.png",
-        "https://i.imgur.com/your-image-url-3b.png",
-        "https://i.imgur.com/your-image-url-3c.png",
+        "https://tse2.mm.bing.net/th/id/OIP.SyANLf5H5xy0P5yIOutKBAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
+        "https://m.media-amazon.com/images/I/61NoGjrg3RL.AC_SR500,386.jpg",
+        "https://shopae.co.za/wp-content/uploads/2024/02/130.png",
       ],
     },
   ],
@@ -37,7 +40,9 @@ export const productsObject = {
       description:
         "A refreshing blend of zesty lemon and cool mint in purified water.",
       price: "R18.00",
-      images: ["https://i.imgur.com/your-image-url-4.png"],
+      images: [
+        "https://static.vecteezy.com/system/resources/previews/012/096/573/original/lemon-mint-infused-water-recipe-free-png.png",
+      ],
     },
     {
       id: "f2",
@@ -45,7 +50,9 @@ export const productsObject = {
       description:
         "A sweet mix of locally sourced mixed berries for a fruity twist.",
       price: "R20.00",
-      images: ["https://i.imgur.com/your-image-url-5.png"],
+      images: [
+        "https://www.drinksplash.ca/sites/g/files/zmtnxh191/files/2022-10/splash_blast-canada-sparkling-wild_berry-product-detail--500mL-6pk.png",
+      ],
     },
     {
       id: "f3",
@@ -53,7 +60,9 @@ export const productsObject = {
       description:
         "Subtly sweet and juicy peach flavour in our purified water.",
       price: "R19.00",
-      images: ["https://i.imgur.com/your-image-url-6.png"],
+      images: [
+        "https://images.freshop.com/00019063012295/31584aebfa8033a66467d7fac0da8df7_large.png",
+      ],
     },
     {
       id: "f4",
@@ -61,7 +70,9 @@ export const productsObject = {
       description:
         "A cool and crisp combination of fresh cucumber and tangy lime.",
       price: "R18.00",
-      images: ["https://i.imgur.com/your-image-url-7.png"],
+      images: [
+        "https://images.freshop.com/00852481007111/7cdd3392ac56649981b27acdd7b9fd8a_large.png",
+      ],
     },
   ],
   "Alkaline Water": [
@@ -71,7 +82,9 @@ export const productsObject = {
       description:
         "High-pH water for improved hydration and a balanced lifestyle.",
       price: "R30.00",
-      images: ["https://i.imgur.com/your-image-url-8.png"],
+      images: [
+        "https://www.valdezmarket.com/imgs/products/valdez-market-kirkland-signature-alkaline-water-ph-9iowl42.jpg",
+      ],
     },
     {
       id: "a2",
@@ -79,7 +92,9 @@ export const productsObject = {
       description:
         "A 5L container of our premium high pH alkaline water for the family.",
       price: "R80.00",
-      images: ["https://i.imgur.com/your-image-url-9.png"],
+      images: [
+        "https://designerwater.co.za/wp-content/uploads/2024/01/Box-Shot-Designer-Water-500x500.png",
+      ],
     },
     {
       id: "a3",
@@ -87,7 +102,7 @@ export const productsObject = {
       description:
         "Boosted with essential electrolytes for rapid rehydration after a braai or workout.",
       price: "R35.00",
-      images: ["https://i.imgur.com/your-image-url-10.png"],
+      images: ["https://m.media-amazon.com/images/I/61R59Mqf4hL.jpg"],
     },
   ],
   "Purified Ice Cubes": [
@@ -97,7 +112,9 @@ export const productsObject = {
       description:
         "Made from our purified water for the clearest, coldest drinks.",
       price: "R15.00",
-      images: ["https://i.imgur.com/your-image-url-11.png"],
+      images: [
+        "https://prod-spinneys-cdn-new.azureedge.net/media/images/products/2024/08/6297000259048.jpg",
+      ],
     },
     {
       id: "i2",
@@ -105,7 +122,9 @@ export const productsObject = {
       description:
         "Perfect for cocktails, chilling drinks quickly at your jol, and events.",
       price: "R60.00",
-      images: ["https://i.imgur.com/your-image-url-12.png"],
+      images: [
+        "https://th.bing.com/th/id/R.2a806eb52b67c457ed60894e73236dcc?rik=EzBCi0VeO%2fE0Bw&pid=ImgRaw&r=0",
+      ],
     },
   ],
   "Personalized Labels": [
