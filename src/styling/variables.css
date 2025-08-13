@@ -19,6 +19,7 @@
   --color-brand-secondary: #48cae4; /* A vibrant, light blue for accents and highlights */
   --color-brand-tertiary: #90e0ef; /* A very light, airy blue for subtle backgrounds */
   --color-brand-callout: #023e8a; /* A dark, bold blue for strong call-to-action sections */
+  --color-dark: #242424;
 
   /* =========================================================================
      * 2. Semantic Colors
@@ -51,6 +52,7 @@
   --font-size-small: 0.875rem; /* 14px */
   --font-size-medium: 1rem; /* 16px */
   --font-size-large: 1.25rem; /* 20px */
+  --font-weight-bold: bold;
 
   --line-height-base: 1.6;
   --line-height-heading: 1.2;

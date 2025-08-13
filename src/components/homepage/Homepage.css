@@ -10,6 +10,11 @@
 /* Hero Section */
 .hero {
   background-color: var(--color-brand-callout);
+  background-image: url("https://cdn.pixabay.com/photo/2016/11/29/07/15/glass-1868045_1280.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: border-box;
   color: var(--color-text-on-dark);
   text-align: center;
   padding: var(--space-xl) var(--space-md);
@@ -22,12 +27,15 @@
   font-size: var(--font-size-h1);
   margin-bottom: var(--space-sm);
   line-height: var(--line-height-heading);
+  text-shadow: 0 0 8px var(--color-dark);
+  font-weight: var(--font-weight-bold);
 }
 
 .hero-subheading {
   font-size: var(--font-size-large);
   max-width: var(--container-max-width);
   margin: 0 auto var(--space-lg);
+  text-shadow: 0 0 8px var(--color-dark);
 }
 
 .hero-icon {
