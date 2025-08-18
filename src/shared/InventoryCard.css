@@ -1,6 +1,6 @@
-/* ProductCard.css - Enhanced with cart animation */
+/* InventoryCard.css - Simplified inventory display card */
 
-.product-card {
+.inventory-card {
   background-color: var(--color-background-card);
   border-radius: var(--border-radius-base);
   overflow: hidden;
@@ -11,7 +11,7 @@
   height: 100%;
 }
 
-.product-card:hover {
+.inventory-card:hover {
   transform: translateY(-10px);
   box-shadow: var(--box-shadow-hover);
 }
@@ -30,7 +30,7 @@
     var(--transition-timing-ease);
 }
 
-.product-card:hover .product-image {
+.inventory-card:hover .product-image {
   transform: scale(1.05);
 }
 
@@ -113,64 +113,25 @@
   font-weight: bold;
 }
 
-.add-to-cart-btn {
-  position: relative;
+.availability-badge {
   display: flex;
   align-items: center;
   gap: var(--space-xs);
-  background-color: var(--color-brand-primary);
-  color: var(--color-text-on-dark);
-  border: none;
-  padding: var(--space-sm) var(--space-md);
+  background-color: var(--color-brand-secondary);
+  color: var(--color-text-body);
+  padding: var(--space-xs) var(--space-sm);
   border-radius: var(--border-radius-pill);
   font-family: var(--font-family-body);
   font-weight: bold;
-  cursor: pointer;
-  transition: all var(--transition-speed-normal) var(--transition-timing-ease);
-  box-shadow: var(--box-shadow-button);
-  overflow: hidden;
+  font-size: var(--font-size-medium);
 }
 
-.add-to-cart-btn:hover {
-  background-color: var(--color-brand-secondary);
-  transform: translateY(-2px);
-  box-shadow: var(--box-shadow-hover);
+.available-icon {
+  color: var(--color-brand-callout);
 }
 
-.add-to-cart-btn .btn-text {
-  transition: transform 0.3s ease;
-}
-
-.add-to-cart-btn .added-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-
-.add-to-cart-btn.added {
-  background-color: var(--color-brand-secondary);
-}
-
-.add-to-cart-btn.added .btn-text {
-  transform: translateY(-30px);
-  opacity: 0;
-}
-
-.add-to-cart-btn.added .added-text {
-  transform: translate(-50%, -50%);
-  opacity: 1;
-}
-
-.cart-icon {
-  transition: transform var(--transition-speed-fast)
-    var(--transition-timing-ease);
-}
-
-.add-to-cart-btn:hover .cart-icon {
-  transform: scale(1.2) rotate(-10deg);
+.availability-text {
+  white-space: nowrap;
 }
 
 /* Responsive Adjustments */
@@ -178,9 +139,29 @@
   .product-meta {
     flex-direction: column;
     align-items: stretch;
+    gap: var(--space-sm);
   }
 
-  .add-to-cart-btn {
+  .availability-badge {
     justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-meta {
+    gap: var(--space-xs);
+  }
+
+  .price-container,
+  .availability-badge {
+    padding: var(--space-xs);
+  }
+
+  .product-price {
+    font-size: var(--font-size-medium);
+  }
+
+  .availability-text {
+    font-size: var(--font-size-small);
   }
 }

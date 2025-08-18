@@ -37,7 +37,7 @@ const Homepage = () => {
         </p>
         <Drop size={64} className="hero-icon" weight="fill" />
         <Link to="/products" className="order-button">
-          See Our Products
+          View Our Inventory
         </Link>
       </animated.header>
       {/* About Section */}
@@ -65,15 +65,15 @@ const Homepage = () => {
             <h3 className="product-title">Bottled Water</h3>
             <p className="product-description">
               Pure still and sparkling water in 500ml, 1L, and 5L bottles.
-              Starting from R10 per bottle.
+              Available for walk-in purchase.
             </p>
           </li>
           <li className="product-item">
             <Drop size={32} className="product-icon secondary" />
             <h3 className="product-title">Water Dispensers</h3>
             <p className="product-description">
-              Hot and cold dispensers for home or office use. Eco-friendly and
-              easy to maintain.
+              Hot and cold dispensers for home or office use. Available for
+              purchase at our store.
             </p>
           </li>
           <li className="product-item">
@@ -81,7 +81,7 @@ const Homepage = () => {
             <h3 className="product-title">Refill Services</h3>
             <p className="product-description">
               Bring your own bottle and refill with our ultra-purified water at
-              our Witbank store for just R5 per liter.
+              our Witbank store.
             </p>
           </li>
         </ul>

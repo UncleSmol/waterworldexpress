@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import ProductCard from "../../shared/ProductCard";
+import InventoryCard from "../../shared/InventoryCard";
 import { productsObject } from "../../shared/productsObject";
 import {
   MagnifyingGlass,
@@ -59,7 +59,7 @@ export default function Products() {
 
   return (
     <section className="products-page">
-      <h1 className="products-heading">Our Products</h1>
+      <h1 className="products-heading">Our Inventory</h1>
 
       {/* Product Controls: Search, Filter, and Sort */}
       <div className="product-controls">
@@ -69,7 +69,7 @@ export default function Products() {
           <input
             type="text"
             className="search-input"
-            placeholder="Search for products..."
+            placeholder="Search our inventory..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -118,11 +118,11 @@ export default function Products() {
       <div className="product-list">
         {sortedProducts.length > 0 ? (
           sortedProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <InventoryCard key={product.id} product={product} />
           ))
         ) : (
           <p className="no-products-found">
-            No products match your search or filter criteria.
+            No items match your search or filter criteria.
           </p>
         )}
       </div>

@@ -1,16 +1,14 @@
 import React, { useState } from "react";
-import { useCart } from "../context/CartContext";
 import {
   Coins,
-  ShoppingCartSimple,
+  CheckCircle,
   CaretLeft,
   CaretRight,
 } from "@phosphor-icons/react";
-import "./ProductCard.css";
+import "./InventoryCard.css";
 
-const ProductCard = ({ product }) => {
+const InventoryCard = ({ product }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const { addToCart } = useCart();
 
   const nextImage = () => {
     setCurrentImageIndex(
@@ -25,21 +23,8 @@ const ProductCard = ({ product }) => {
     );
   };
 
-  const handleAddToCart = () => {
-    addToCart(product);
-
-    // Visual feedback
-    const button = document.querySelector(
-      `.add-to-cart-btn[data-id="${product.id}"]`
-    );
-    if (button) {
-      button.classList.add("added");
-      setTimeout(() => button.classList.remove("added"), 500);
-    }
-  };
-
   return (
-    <div className="product-card">
+    <div className="inventory-card">
       <div className="image-container">
         <img
           src={product.images[currentImageIndex]}
@@ -65,19 +50,14 @@ const ProductCard = ({ product }) => {
             <Coins size={20} className="icon price-icon" />
             <p className="product-price">{product.price}</p>
           </div>
-          <button
-            className="add-to-cart-btn"
-            onClick={handleAddToCart}
-            data-id={product.id}
-          >
-            <ShoppingCartSimple size={20} className="icon cart-icon" />
-            <span className="btn-text">Add to Cart</span>
-            <span className="added-text">Added!</span>
-          </button>
+          <div className="availability-badge">
+            <CheckCircle size={20} className="icon available-icon" />
+            <span className="availability-text">Available</span>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default ProductCard;
+export default InventoryCard;
