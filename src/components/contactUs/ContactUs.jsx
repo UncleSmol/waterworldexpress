@@ -2,7 +2,7 @@ import React from "react";
 import { MapPin, Phone, Envelope } from "@phosphor-icons/react";
 import { useSpring, animated } from "@react-spring/web";
 
-import "./ContactUs.css"; // Ensure this CSS file exists
+import "./ContactUs.css";
 
 export default function ContactUs() {
   const formProps = useSpring({
@@ -19,7 +19,6 @@ export default function ContactUs() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would handle the form submission, e.g., send data to an API
     console.log("Form submitted!");
   };
 
@@ -96,29 +95,30 @@ export default function ContactUs() {
             <div className="info-item">
               <MapPin size={24} className="info-icon" />
               <p className="info-text">
-                Head Office: 123 Water Street, Sandton, Johannesburg, 2196
+                Saveways Crescent Centre, Corner of Mandela Street & OR Tambo
+                Road, eMalahleni, 1035, South Africa
               </p>
             </div>
             <div className="info-item">
               <Phone size={24} className="info-icon" />
-              <p className="info-text">+27 11 123 4567</p>
+              <p className="info-text">+27 60 567 9397</p>
             </div>
             <div className="info-item">
               <Envelope size={24} className="info-icon" />
-              <p className="info-text">info@waterworldexpress.co.za</p>
+              <p className="info-text">waterworldwitbank@gmail.com</p>
             </div>
           </div>
           <div className="map-embed-container">
             <h2 className="map-heading">Find Us Here</h2>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14330.407141517036!2d28.04944521405021!3d-26.096739601332496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e957388d021c977%3A0xc395f242d2a4501a!2sSandton%2C%20Johannesburg%2C%202196!5e0!3m2!1sen!2sza!4v1628765432109!5m2!1sen!2sza"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3589.868657823857!2d29.232132576178515!3d-25.87379987728167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1eeaf2a1834d1703%3A0x7c45c151e7e3bdd5!2sSaveways%20Crescent%20Centre!5e0!3m2!1sen!2sza!4v1755071662943!5m2!1sen!2sza"
               width="100%"
               height="400"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Google Maps location of Water World Express"
+              title="Google Maps location of Water World Witbank at Saveways Crescent Centre"
             />
           </div>
         </animated.div>

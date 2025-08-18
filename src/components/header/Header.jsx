@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Logo from "../../assets/images/waterworldlogo.png";
 import DevDocSig from "../../sig/dev-doc-logo.svg";
 import {
   List,
@@ -54,7 +53,7 @@ const Header = () => {
       navIcon: DevDocSig,
       isSignature: true,
       isHighlighted: true,
-      path: "https://unclesmol.github.io/dev-doc", // External link
+      path: "https://unclesmol.github.io/dev-doc",
     },
   ];
 
@@ -64,7 +63,6 @@ const Header = () => {
   useEffect(() => {
     const handleResize = () => {
       setIsDesktop(window.innerWidth >= 769);
-      // Close mobile menu when resizing to desktop
       if (window.innerWidth >= 769 && isMobileMenuOpen) {
         setIsMobileMenuOpen(false);
       }
@@ -77,7 +75,7 @@ const Header = () => {
   const mobileNavSpring = useSpring({
     y: isDesktop ? "0%" : isMobileMenuOpen ? "0%" : "-100%",
     opacity: isDesktop ? 1 : isMobileMenuOpen ? 1 : 0,
-    config: { tension: 280, friction: 60 },
+    config: { tension: 400, friction: 30 },
   });
 
   const toggleMobileMenu = () => {
@@ -93,7 +91,7 @@ const Header = () => {
   return (
     <header className="__Header">
       <Link to="/">
-        <img src={Logo} alt="Water World Logo" className="__Logo" />
+        <h1 className="__Logo">WATER WORLD</h1>
       </Link>
 
       <button
